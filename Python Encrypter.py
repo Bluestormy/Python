@@ -1,6 +1,6 @@
 # Copyright (c) 2016 Kyle George. You may share and distribute my code as long as this notice stays in place. Enjoy!
 """
-This Python Encrypter works on the basic equation (y = (x+k) % 26).
+This Python Encrypter works on the principle of the Caesar Cipher and the Substitution Cipher, Might use basic equation (y = (x+k) % 26)
 For this, set the position of A to 0 and set Z to 26. See Below For an example of the alphabet with index numbers
 A B C D E F G H I J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
@@ -78,9 +78,9 @@ def decrypt():
     print(result)
     for i in result:
         count = 1
-        while count == 1:
+        while count == 1:# This is in a while loop, like so to ensure that the answr is only printed once
             result_str = str(result)
-            result_str = result_str.translate(None, "[],''")
+            result_str = result_str.translate(None, "[],''")# remove any [](square brackets, commas and quotes when printed
             print(result_str.replace("", ""))
             count += 1
             exit()
