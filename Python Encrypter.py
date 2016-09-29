@@ -71,6 +71,8 @@ def decrypt():
         num_val = keys[values.index(i)] - key_shift
         if num_val < 0:
             num_val += 26
+        if num_val == 27:
+            num_val == 26
         decrypted_msg.append(num_val)
     result = [alphabet[i] for i in decrypted_msg]
     print(result)
